@@ -45,7 +45,6 @@ angular.module('ajoslin.mobile-navigate')
     nav.onRouteSuccess = null;
     //Add a default onroutesuccess for the very first page
     function defaultRouteSuccess($event, next, last) {
-      nav.current && navHistory.push(nav.current);
       nav.next = new Page($location.path());
       nav.next.transitionOnce('none');
       navigate(nav.next);
